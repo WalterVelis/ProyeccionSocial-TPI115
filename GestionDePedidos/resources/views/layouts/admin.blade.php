@@ -92,24 +92,24 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>Menu</span>
+                <span>Categorias</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Sub-menu</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Sub-menu</a></li>
+                <li><a href="{{url('/admin/categoria/create')}}"><i class="fa fa-circle-o"></i> Nueva Categoria</a></li>
+                <li><a href="{{url('/admin/categoria')}}"><i class="fa fa-circle-o"></i> Gestionar Categorias</a></li>
               </ul>
             </li>
             
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-th"></i>
-                <span>Menu</span>
+                <span>Productos</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Sub-menu</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Sub-menu</a></li>
+                <li><a href="{{url('/admin/producto/create')}}"><i class="fa fa-circle-o"></i> Nuevo Produco</a></li>
+                <li><a href="{{url('/admin/producto/')}}"><i class="fa fa-circle-o"></i> Gestionar Productos</a></li>
               </ul>
             </li>
             <li class="treeview">
