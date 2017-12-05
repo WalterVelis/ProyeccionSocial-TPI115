@@ -25,11 +25,11 @@ class ProductoRequest extends Request
     {
         return [
             'idcategoria'=>'required',
-            'codigo'=>'required|max:10',
+            'codigo'=>'required|max:12|min:12',
             'nombre'=>'required|max:50',
             'descripcion'=>'max:250',
             'imagen'=>'mimes:jpeg,tmp,png',
-            'precio'=>'required'
+            'precio'=>'required|numeric'
         ];
-    }
+    } 
 }

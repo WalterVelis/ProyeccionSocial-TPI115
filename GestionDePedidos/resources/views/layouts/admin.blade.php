@@ -112,15 +112,28 @@
                 <li><a href="{{url('/admin/producto/')}}"><i class="fa fa-circle-o"></i> Gestionar Productos</a></li>
               </ul>
             </li>
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-shopping-cart"></i>
-                <span>Menu</span>
+                <span>Ofertas</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Sub-menu</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Sub-menu</a></li>
+                <li><a href="{{url('/admin/oferta/create')}}"><i class="fa fa-circle-o"></i> Nueva Oferta</a></li>
+                <li><a href="{{url('/admin/oferta/')}}"><i class="fa fa-circle-o"></i> Gestionar Ofertas</a></li>
+              </ul>
+            </li>
+
+             <li class="treeview">
+              <a href="#">
+                <i class="fa fa-th"></i>
+                <span>Clientes</span>
+                 <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="{{url('/admin/cliente/create')}}"><i class="fa fa-circle-o"></i> Nuevo Cliente</a></li>
+                <li><a href="{{url('/admin/cliente/')}}"><i class="fa fa-circle-o"></i> Gestionar Clientes</a></li>
               </ul>
             </li>
                        

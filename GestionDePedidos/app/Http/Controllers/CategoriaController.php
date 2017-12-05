@@ -22,7 +22,6 @@ class CategoriaController extends Controller
         {
             $query=trim($request->get('searchText'));
             $categorias=DB::table('categoria')->where('nombrecategoria','LIKE','%'.$query.'%')
-            ->where ('condicion','=','1')
             ->orderBy('idcategoria','desc')
             ->paginate(7);
             return view('admin.categoria.index',["categorias"=>$categorias,"searchText"=>$query]);
@@ -58,10 +57,22 @@ class CategoriaController extends Controller
         $categoria->update();
         return Redirect::to('admin/categoria');
     }
+    
     public function destroy($id)
     {
+        $affectedRows = Categoria::where('idcategoria','=',$id)->delete();
+        return Redirect::to('admin/categoria');
+
+    }
+
+    public function estado($id)
+    {
         $categoria=Categoria::findOrFail($id);
-        $categoria->condicion='0';
+        if($categoria->condicion=='0')
+             $categoria->condicion='1';
+         else
+            $categoria->condicion='0';
+    
         $categoria->update();
         return Redirect::to('admin/categoria');
     }

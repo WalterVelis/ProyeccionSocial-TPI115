@@ -16,7 +16,11 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('password')->nullable();
+            $table->string('avatar')->default('user_default.png');
+            $table->enum('type',['admin','cliente'])->default('cliente');
+            $table->string('code')->nullable();
+            $table->integer('active')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

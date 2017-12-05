@@ -25,7 +25,7 @@ class CategoriaRequest extends Request
     {
         return [
             'nombre'=>'required|max:50',
-            'descripcion'=>'max:250',
+            'descripcion'=>'required|max:250',
         ];
     }
 }
